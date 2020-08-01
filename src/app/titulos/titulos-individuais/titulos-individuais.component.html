@@ -1,0 +1,10 @@
+<mat-grid-list [cols]="breakpoint" rowHeight="2:0.5" (window:resize)="onResize($event)">
+  <mat-grid-tile [rowspan]="rows" [colspan]="breakpoint">
+    <div class="tituloIndividual">
+      <h2 class="titulo">Cadastro de Títulos</h2>
+      <h4 class="subtitulo">Cadastro // Títulos</h4>
+      <mat-divider></mat-divider>
+      <app-listar-titulos-individuais></app-listar-titulos-individuais>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

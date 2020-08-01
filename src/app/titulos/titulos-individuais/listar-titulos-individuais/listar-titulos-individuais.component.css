@@ -1,0 +1,109 @@
+.tblTitulosIndividuais {
+  width: 95%;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.divTable {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.btnCadastros {
+  float: right;
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: #ef6406;
+  color: white;
+}
+
+.btnCadastrarGrupo {
+  margin-left: 20px;
+}
+
+.btnFiltro {
+  color: #ef6406;
+  vertical-align: middle;
+}
+
+.btnLupa {
+  color: #ef6406;
+}
+
+.inpBuscar {
+  font-size: 10px;
+  margin-top: 15px;
+  width: 500px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .tblTitulosIndividuais {
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+
+  .mobile-label {
+    width: 130px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 0px 24px;
+    min-height: 20px;
+  }
+
+  .inpBuscar {
+    margin-top: 0px;
+    width: 90%;
+    margin-left: 2px;
+  }
+
+  .btnCadastros {
+    float: left;
+    margin-top: 5px;
+    border-radius: 15px;
+    background-color: #ef6406;
+    color: white;
+    width: 47%;
+    margin-left: 5px;
+  }
+
+  .btnCadastrarGrupo {
+    margin-left: 0px;
+    float: right;
+    margin-right: 5px;
+  }
+
+  .btnFiltro {
+    margin-left: 5px;
+  }
+
+  mat-cell:first-of-type,
+  mat-header-cell:first-of-type,
+  mat-footer-cell:first-of-type {
+    padding-left: 0px;
+  }
+}

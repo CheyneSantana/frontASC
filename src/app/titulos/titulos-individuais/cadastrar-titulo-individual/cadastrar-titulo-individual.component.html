@@ -1,0 +1,30 @@
+<h2 mat-mat-dialog-title>Cadastro de Título Individual</h2>
+<div mat-dialog-content>
+  <mat-form-field class="formField">
+    <mat-label>Título</mat-label>
+    <input matInput [formControl]="tituloFormControl" [errorStateMatcher]="matcher" placeholder="Número do Título"
+      #input [(ngModel)]="titulo.titulo">
+    <mat-error *ngIf="tituloFormControl.hasError('required')">Campo obrigatório</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="formField">
+    <mat-label>Situação</mat-label>
+    <mat-select [(ngModel)]="titulo.situacao" [formControl]="situacaoFormControl" [errorStateMatcher]="matcher">
+      <mat-option value="Inativo">Inativo</mat-option>
+      <mat-option value="Ativo">Ativo</mat-option>
+    </mat-select>
+    <mat-error *ngIf="situacaoFormControl.hasError('required')">Campo obrigatório</mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field class="formField">
+    <mat-label>Observação</mat-label>
+    <textarea matInput placeholder="Observação" #input [(ngModel)]="titulo.observacao" maxlength="255"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close class="btnVoltar">Voltar</button>
+  <button mat-stroked-button (click)="salvar()" class="btnSalvar">
+    <mat-icon>done</mat-icon>
+    <span>Salvar</span>
+  </button>
+</div>

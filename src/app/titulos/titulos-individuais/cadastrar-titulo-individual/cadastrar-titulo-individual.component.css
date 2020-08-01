@@ -1,0 +1,26 @@
+.btnVoltar {
+  border-color: #ef6406;
+  color: #ef6406;
+  border-radius: 10px;
+  border-width: 3px;
+}
+
+.btnSalvar {
+  background-color: #ef6406;
+  color: white;
+  border-radius: 10px;
+}
+
+.formField {
+  width: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .btnVoltar .btnSalvar {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

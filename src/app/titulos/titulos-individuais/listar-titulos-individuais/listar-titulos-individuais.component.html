@@ -1,0 +1,89 @@
+<div class="tblTitulosIndividuais">
+  <div style="display: inline;">
+    <button mat-raised-button class="btnCadastros btnCadastrarGrupo">+ Cadastrar Grupo</button>
+    <button mat-raised-button class="btnCadastros" (click)="openDialogCadastrarIndividual()">+ Cadastrar Individual</button>
+    <mat-form-field appearance="outline" class="inpBuscar">
+      <mat-label>Buscar</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. João" #input [(ngModel)]="txtFiltro">
+      <mat-icon matSuffix class="btnLupa">search</mat-icon>
+    </mat-form-field>
+    <a mat-icon class="material-icons-outlined btnFiltro" (click)="filtrar()">filter_alt</a>
+  </div>
+  <div class="divTable mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource" matSort >
+
+      <!-- Titulo Column -->
+      <ng-container matColumnDef="titulo">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Titulo</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Titulo:</span>
+          {{titulo.titulo}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Proprietário Column -->
+      <ng-container matColumnDef="proprietario">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Proprietário</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Proprietário:</span>
+          {{titulo.proprietario}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Situação Column -->
+      <ng-container matColumnDef="situacao">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Situação</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Situação:</span>
+          {{titulo.situacao}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Adimissão Column -->
+      <ng-container matColumnDef="admissao">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Adimissão</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Adimissão:</span>
+          {{titulo.admissao | date: 'dd/MM/yyyy'}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Saída Column -->
+      <ng-container matColumnDef="saida">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Saída</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Saída:</span>
+          {{titulo.saida | date: 'dd/MM/yyyy'}}
+        </mat-cell>
+      </ng-container>
+
+      <!-- Ações Column -->
+      <ng-container matColumnDef="acoes">
+        <mat-header-cell *matHeaderCellDef>Ações</mat-header-cell>
+        <mat-cell *matCellDef="let titulo">
+          <span class="mobile-label">Ações:</span>
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="openDialogVisualizar(titulo)">
+              <mat-icon>remove_red_eye</mat-icon>
+              <span>Visualizar</span>
+            </button>
+            <button mat-menu-item (click)="openDialogEditar(titulo)">
+              <mat-icon>edit</mat-icon>
+              <span>Editar</span>
+            </button>
+            <button mat-menu-item (click)="openDialogExcluir(titulo)">
+              <mat-icon>not_interested</mat-icon>
+              <span>Apagar</span>
+            </button>
+          </mat-menu>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
