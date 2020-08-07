@@ -15,6 +15,15 @@ export class TitulosIndividuaisService {
       { titulo: '00001', proprietario: 'João da Silva', situacao: 'Ativo', admissao: new Date(2013, 4, 1), saida: null, observacao: 'teste' },
       { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
       { titulo: '00003', proprietario: 'José dos Santos', situacao: 'Ativo', admissao: new Date(2020, 4, 1), saida: null, observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00001', proprietario: 'João da Silva', situacao: 'Ativo', admissao: new Date(2013, 4, 1), saida: null, observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00003', proprietario: 'José dos Santos', situacao: 'Ativo', admissao: new Date(2020, 4, 1), saida: null, observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' },
+      { titulo: '00002', proprietario: 'Maria de Souza', situacao: 'Inativo', admissao: new Date(2013, 4, 15), saida: new Date(2019, 9, 18), observacao: 'teste' }
     ];
   }
 

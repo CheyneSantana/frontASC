@@ -55,6 +55,10 @@ export class ListarTitulosIndividuaisComponent implements OnInit {
     console.log(titulo);
   }
 
+  imprimir(titulo: TitulosIndividuais) {
+    console.log(titulo);
+  }
+
   abrirDialogCadastrarIndividual() {
     const dialogRef = this.dialog.open(CadastrarTituloIndividualComponent, {
       width: 'auto',

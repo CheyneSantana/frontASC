@@ -9,14 +9,14 @@
     </mat-form-field>
     <a mat-icon class="material-icons-outlined btnFiltro" (click)="filtrar()">filter_alt</a>
   </div>
-  <div class="divTable mat-elevation-z8">
+  <div class="divTable mat-elevation-z8" style="overflow: auto;">
     <mat-table #table [dataSource]="dataSource" matSort >
 
       <!-- Titulo Column -->
       <ng-container matColumnDef="titulo">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Titulo</mat-header-cell>
-        <mat-cell *matCellDef="let titulo">
-          <span class="mobile-label">Titulo:</span>
+        <mat-cell *matCellDef="let titulo" class="mobile-label-primeiro">
+          <span class="mobile-label mobile-label-primeiro">Titulo:</span>
           {{titulo.titulo}}
         </mat-cell>
       </ng-container>
@@ -41,9 +41,9 @@
 
       <!-- Adimissão Column -->
       <ng-container matColumnDef="admissao">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Adimissão</mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Admissão</mat-header-cell>
         <mat-cell *matCellDef="let titulo">
-          <span class="mobile-label">Adimissão:</span>
+          <span class="mobile-label">Admissão:</span>
           {{titulo.admissao | date: 'dd/MM/yyyy'}}
         </mat-cell>
       </ng-container>
@@ -77,6 +77,10 @@
             <button mat-menu-item (click)="abrirDialogExcluir(titulo)">
               <mat-icon>not_interested</mat-icon>
               <span>Apagar</span>
+            </button>
+            <button mat-menu-item (click)="imprimir(titulo)">
+              <mat-icon>print</mat-icon>
+              <span>Imprimir</span>
             </button>
           </mat-menu>
         </mat-cell>

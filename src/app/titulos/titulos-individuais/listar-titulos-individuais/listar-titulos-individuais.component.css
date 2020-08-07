@@ -50,7 +50,7 @@ th.mat-sort-header-sorted {
 
 .mat-table {
   overflow: auto;
-  max-height: 500px;
+  max-height: 400px;
 }
 
 .mobile-label {
@@ -84,7 +84,12 @@ th.mat-sort-header-sorted {
     display: inline-block;
     color: #6e6e6e !important;
     font-weight: 600 !important;
-    font-size: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-label-primeiro {
+    margin-top: 10px;
   }
 
   .mat-header-row {
