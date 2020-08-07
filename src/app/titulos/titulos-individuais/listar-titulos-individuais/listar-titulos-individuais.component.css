@@ -16,6 +16,7 @@
   border-radius: 15px;
   background-color: #ef6406;
   color: white;
+  font-family: "Proxima Nova"
 }
 
 .btnCadastrarGrupo {
@@ -25,6 +26,7 @@
 .btnFiltro {
   color: #ef6406;
   vertical-align: middle;
+  margin-left: 10px;
 }
 
 .btnLupa {
@@ -32,9 +34,14 @@
 }
 
 .inpBuscar {
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 15px;
   width: 500px;
+  font-family: "Proxima Nova"
+}
+
+::ng-deep.mat-form-field-outline-thick {
+  color: #6e6e6e !important;
 }
 
 th.mat-sort-header-sorted {
@@ -48,21 +55,20 @@ th.mat-sort-header-sorted {
 
 .mobile-label {
   display: none;
+  font-family: "Proxima Nova"
 }
 
 .mat-header-cell {
   color: #6e6e6e !important;
   font-weight: 600 !important;
-  font-size: 20px;
+  font-size: 18px;
+  font-family: "Proxima Nova"
 }
 
 .mat-cell {
-  font-size: 16px;
+  font-size: 14px;
   color: #000000;
-}
-
-.mat-form-field-appearance-outline .mat-form-field-outline-thick {
-  color: #e85234;
+  font-family: "Proxima Nova"
 }
 
 @media (max-width: 600px) {

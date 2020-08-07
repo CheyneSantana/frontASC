@@ -51,7 +51,6 @@ export class CadastrarTituloIndividualComponent implements OnInit {
 
 
   salvar() {
-    console.log(this.formCadastroIndividual.get('situacao').value);
     this.titulo = {
       titulo: this.formCadastroIndividual.get('titulo').value,
       admissao: new Date(),
