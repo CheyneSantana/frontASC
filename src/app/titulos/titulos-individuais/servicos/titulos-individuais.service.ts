@@ -18,11 +18,11 @@ export class TitulosIndividuaisService {
     ];
   }
 
-  insertTitulos(titulo: TitulosIndividuais) {
+  inserirTitulos(titulo: TitulosIndividuais) {
     return this.titulos.push(titulo);
   }
 
-  findTitulo(titulo: string) {
+  buscarTitulo(titulo: string) {
     console.log(titulo);
   }
 }

@@ -1,10 +1,10 @@
 <div class="tblTitulosIndividuais">
   <div style="display: inline;">
-    <button mat-raised-button class="btnCadastros btnCadastrarGrupo">+ Cadastrar Grupo</button>
-    <button mat-raised-button class="btnCadastros" (click)="openDialogCadastrarIndividual()">+ Cadastrar Individual</button>
+    <button mat-raised-button class="btnCadastros btnCadastrarGrupo"><mat-icon>add</mat-icon>Cadastrar Grupo</button>
+    <button mat-raised-button class="btnCadastros" (click)="abrirDialogCadastrarIndividual()"><mat-icon>add</mat-icon>Cadastrar Individual</button>
     <mat-form-field appearance="outline" class="inpBuscar">
       <mat-label>Buscar</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. João" #input [(ngModel)]="txtFiltro">
+      <input matInput (keyup)="aplicarFiltro($event)" placeholder="Ex. João" #input [(ngModel)]="txtFiltro">
       <mat-icon matSuffix class="btnLupa">search</mat-icon>
     </mat-form-field>
     <a mat-icon class="material-icons-outlined btnFiltro" (click)="filtrar()">filter_alt</a>
@@ -66,15 +66,15 @@
             <mat-icon>more_vert</mat-icon>
           </button>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="openDialogVisualizar(titulo)">
+            <button mat-menu-item (click)="abrirDialogVisualizar(titulo)">
               <mat-icon>remove_red_eye</mat-icon>
               <span>Visualizar</span>
             </button>
-            <button mat-menu-item (click)="openDialogEditar(titulo)">
+            <button mat-menu-item (click)="abrirDialogEditar(titulo)">
               <mat-icon>edit</mat-icon>
               <span>Editar</span>
             </button>
-            <button mat-menu-item (click)="openDialogExcluir(titulo)">
+            <button mat-menu-item (click)="abrirDialogExcluir(titulo)">
               <mat-icon>not_interested</mat-icon>
               <span>Apagar</span>
             </button>

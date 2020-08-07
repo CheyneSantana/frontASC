@@ -30,32 +30,32 @@ export class ListarTitulosIndividuaisComponent implements OnInit {
     this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
+  aplicarFiltro(event: Event) {
     this.txtFiltro = (event.target as HTMLInputElement).value;
     this.dataSource.filter = this.txtFiltro.trim().toLowerCase();
   }
 
   filtrar() {
-    this.titulosService.findTitulo(this.txtFiltro);
+    this.titulosService.buscarTitulo(this.txtFiltro);
   }
 
   private getTitulos() {
     this.titulos = this.titulosService.getTitulos();
   }
 
-  openDialogVisualizar(titulo: TitulosIndividuais) {
+  abrirDialogVisualizar(titulo: TitulosIndividuais) {
     console.log(titulo);
   }
 
-  openDialogEditar(titulo: TitulosIndividuais) {
+  abrirDialogEditar(titulo: TitulosIndividuais) {
     console.log(titulo);
   }
 
-  openDialogExcluir(titulo: TitulosIndividuais) {
+  abrirDialogExcluir(titulo: TitulosIndividuais) {
     console.log(titulo);
   }
 
-  openDialogCadastrarIndividual() {
+  abrirDialogCadastrarIndividual() {
     const dialogRef = this.dialog.open(CadastrarTituloIndividualComponent, {
       width: 'auto',
       height: 'auto'
